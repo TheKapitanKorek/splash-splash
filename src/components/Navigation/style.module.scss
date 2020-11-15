@@ -1,0 +1,70 @@
+$input_background_color: #eeeeee;
+$input_font_color: #808080;
+$button_hover: #333333;
+
+.input_bar {
+  color: $input_font_color;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  height: 10vh;
+  background: white;
+  .logo {
+    background: red;
+    height: 10vh;
+    width: 10vh;
+  }
+  .input {
+    display: flex;
+    color: #111111;
+    margin: calc(1vh + 0.5vw);
+    box-sizing: border-box;
+    border-radius: 4vh;
+    background: $input_background_color;
+    overflow: hidden;
+    input {
+      color: $input_font_color;
+      background: $input_background_color;
+      border: 0;
+      padding: 0;
+      &:focus {
+        border: 0;
+        outline: none;
+      }
+    }
+    button {
+      margin: 0 0.5vw;
+      background: $input_background_color;
+      border: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      svg {
+        fill: $input_font_color;
+        display: flex;
+        height: 2vh;
+        width: 2vh;
+        justify-content: center;
+        align-items: center;
+        path {
+          color: blue;
+          height: 16px;
+          width: 16px;
+        }
+      }
+      &:hover {
+        svg {
+          fill: $button_hover;
+        }
+      }
+      &:focus {
+        border: 0;
+        outline: none;
+      }
+    }
+  }
+}
