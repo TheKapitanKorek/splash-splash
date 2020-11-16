@@ -1,6 +1,4 @@
 .overlay {
-  margin: 0;
-  padding: 0;
   position: fixed;
   z-index: 10000;
   top: 0;
@@ -42,9 +40,8 @@
     }
   }
   .cancel_button {
+    cursor: pointer;
     overflow: hidden;
-    margin: 0;
-    padding: 0;
     border: 0;
     background: rgba(255, 255, 255, 0.4);
     position: absolute;

@@ -1,13 +1,24 @@
-:global(body) {
-  margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-:global(#root) {
-  margin: 0;
-  padding: 0;
-}
-#App {
+html {
+  -webkit-box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
   box-sizing: border-box;
+  font-size: calc(0.5vw + 9px);
+  width: 100%;
+}
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+* {
   margin: 0;
   padding: 0;
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+  color: #0b0b0b;
+  background-color: #fff;
+  line-height: 1.5;
 }

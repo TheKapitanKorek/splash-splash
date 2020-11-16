@@ -50,6 +50,7 @@ const SearchBar:FunctionComponent<SearchBarProps> = ({value,setValue,big})=>{
             onKeyDown={(e)=>{
                 if(e.key==="Enter" && value.length>0){
                     history.push(`/photos/${value.replace(" ","-")}`);
+                    setValue("");
                 }
             }}
             />

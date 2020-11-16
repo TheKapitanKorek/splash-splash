@@ -2,20 +2,17 @@ $input_font_color: #808080;
 
 .input_bar {
   color: $input_font_color;
-  margin: 0;
-  padding: 0;
-  border: 0;
   box-sizing: border-box;
   display: flex;
   align-items: center;
   height: 10vh;
-  padding: 2vh 0 3vh 0;
+  padding: 2vw;
   border-bottom: 2px solid $input_font_color;
   background: white;
 
   .logo {
     height: 4vh;
     width: 4vh;
-    margin: 0 3vh;
+    margin-right: 1em;
   }
 }
