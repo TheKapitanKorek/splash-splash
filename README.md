@@ -30,3 +30,11 @@ the app consists of two pages:
 ### Photos
 
 ![Image](photos.jpg)
+
+## Technologies used:
+
+### type-script
+
+### react
+
+### sass
