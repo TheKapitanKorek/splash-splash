@@ -45,7 +45,6 @@ const Photos:FunctionComponent = ()=>{
         (async ()=>{
             try{
             const response = await getPhotos(page,query);
-            console.log(response);
             const formated : any = response.data.results.map((el:any)=>{ //I know it is not good to set typa as any but in this case its good enougth
                 return{
                 author:el?.user?.name ? el.user.name : "unknown",
