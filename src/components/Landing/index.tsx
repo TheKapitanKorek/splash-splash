@@ -12,7 +12,7 @@ const Landing : FunctionComponent = ()=>{
             <div className={style.middle_box}>
                 <h1>Splash-Splash</h1>
                 <div className={style.text_wrapper}>
-                <h3>This and unsplash clone that i have created as my recruitment task.</h3>
+                <h3>This is an unsplash clone that i have created as my recruitment task.</h3>
                 <h3>If you are Unsplash please dont throw me in jail.</h3>
                 </div>
                 <SearchBar big={true} value={query} setValue={setQuery}/>
