@@ -1,0 +1,105 @@
+$input_background_color: #eeeeee;
+$input_font_color: #808080;
+$button_hover: #333333;
+
+.container {
+  position: relative;
+}
+#big {
+  height: 8vh;
+  border-radius: 1vh;
+  border: 1px solid $input_font_color;
+  input {
+    font-size: 18px;
+  }
+}
+.input {
+  display: flex;
+  color: #111111;
+  height: 6vh;
+  width: 70vw;
+  box-sizing: border-box;
+  border-radius: 4vh;
+  background: $input_background_color;
+  overflow: hidden;
+  input {
+    color: $input_font_color;
+    background: $input_background_color;
+    border: 0;
+    padding: 0;
+    width: 100%;
+    &:focus {
+      border: 0;
+      outline: none;
+    }
+  }
+  button {
+    cursor: pointer;
+    margin: 0 0.5vw;
+    background: $input_background_color;
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    height: 100%;
+    svg {
+      fill: $input_font_color;
+      display: flex;
+      height: 2vh;
+      width: 2vh;
+      justify-content: center;
+      align-items: center;
+      path {
+        color: blue;
+        height: 16px;
+        width: 16px;
+      }
+    }
+    &:hover {
+      svg {
+        fill: $button_hover;
+      }
+    }
+    &:focus {
+      border: 0;
+      outline: none;
+    }
+  }
+  .discard {
+    margin-left: auto;
+  }
+}
+.sugestion_list {
+  background: white;
+  margin-top: 0.5vh;
+  border: 1px solid $input_font_color;
+  overflow: hidden;
+  padding-top: 1.5vh;
+  border-radius: 0.5vh;
+  width: 100%;
+  position: absolute;
+}
+.sugestion {
+  cursor: pointer;
+  text-indent: 2vw;
+  height: 5vh;
+  line-height: 5vh;
+  color: $input_font_color;
+  background-color: white;
+  &:hover {
+    background: $input_background_color;
+  }
+}
+.no_sugestion {
+  color: white;
+  margin-top: 0.6vh;
+  overflow: hidden;
+  padding-top: 1.5vh;
+  border-radius: 0.5vh;
+  width: 100%;
+  position: absolute;
+}
+a {
+  text-decoration: none;
+}

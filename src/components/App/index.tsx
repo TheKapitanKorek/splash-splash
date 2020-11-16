@@ -3,33 +3,28 @@ import style from './style.module.scss';
 import {
     BrowserRouter as Router,
     Switch,
-    Route,
-    Link,
-    useParams
+    Route
   } from "react-router-dom";
-import {Landing} from '../Landing';
-import {Navigation} from "../Navigation";
-import {Photos} from '../Photos';
-import {getPhotos,getAutocomplete} from '../../apis';
+import Landing from '../Landing';
+import Navigation from "../Navigation";
+import Photos from '../Photos';
+    
+const App:FunctionComponent = ()=>{
 
-interface Props {
-
-}
-
-export const App:FunctionComponent<Props> = ()=>{
     return(
     <Router>
         <div id={style.App}>
-        <Navigation/>
+        <Navigation />
         <Switch>
             <Route path="/" exact>
                 <Landing/>
             </Route>
-            <Route path="/photos/:query">
+            <Route path="/photos/:query" exact>
                 
                 <Photos/>
             </Route>
         </Switch>
         </div>
     </Router>);
-}
+};
+export default App;
