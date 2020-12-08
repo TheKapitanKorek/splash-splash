@@ -7,11 +7,12 @@ import {getAutocomplete} from '../../apis';
 
 interface SugestionListProps {
     results?:string[];
+    setQuery: Function;
 }
 
-const SugestionList:FunctionComponent<SugestionListProps> = ({results})=>{
+const SugestionList:FunctionComponent<SugestionListProps> = ({results,setQuery})=>{
 
-const sugestions = results!.map(el=>{return <Link to={`/photos/${el.replace(" ","-")}`}><div className={style.sugestion}>{el}</div></Link>});
+const sugestions = results!.map(el=>{return <Link onClick={()=>{setQuery("")}}to={`/photos/${el.replace(" ","-")}`}><div className={style.sugestion}>{el}</div></Link>});
 
 if(sugestions.length>0){
     return(<div className={style.sugestion_list}>
@@ -60,7 +61,7 @@ const SearchBar:FunctionComponent<SearchBarProps> = ({value,setValue,big})=>{
                 </svg>
             </button>
         </div>
-        {value.length>2?<SugestionList results={results}/>:null}
+        {value.length>2?<SugestionList results={results} setQuery={setValue}/>:null}
         </div>
     )
 }

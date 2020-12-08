@@ -9,8 +9,8 @@ interface Props{
 }
 
 const Overlay:FunctionComponent<Props> = ({image,author,location,setPhoto})=>{
-    return(<div className={style.overlay}>
-        <div className={style.content}>
+    return(<div className={style.overlay} onClick={()=>{setPhoto(undefined)}}>
+        <div className={style.content} onClick={()=>{setPhoto(undefined)}}>
             <div className={style.description}>
                 <div className={style.info}>
                     Author name: <span className={style.bold}>{author}</span>
